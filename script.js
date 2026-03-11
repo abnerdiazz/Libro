@@ -39,7 +39,11 @@ prevButtons.forEach(button => {
 });
 
 function openBook() {
-    book.style.transform = "translateX(50%)";
+    if(window.innerWidth < 768){
+        book.style.transform = "translateX(0)";
+    }else{
+        book.style.transform = "translateX(50%)";
+    }
 }
 
 function closeBook() {
